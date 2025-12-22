@@ -7,6 +7,6 @@ public record Customer
     string CustomerAddress,
     string CustomerPhone
 )
-    {
+{
     public Customer() : this(0, "", "", "") { }
-    }
+}

@@ -3,7 +3,7 @@
 namespace DO;
 public record Sale
 (
-    int SaleId;
+    int SaleId,
     int ProductId,
     int ProductsCountToSale,
     int PriceAfterSale,
@@ -14,5 +14,5 @@ public record Sale
 )
 
 {
-    public Sale() : this(0,0,1,0,false,DateTime.Now,DateTime.Now){}
+    public Sale() : this(0,1,0,false,DateTime.Now,DateTime.Now){}
 }
