@@ -1,15 +1,18 @@
 ﻿
 
 namespace DO;
+public record Sale
+(
+    int SaleId;
+    int ProductId,
+    int ProductsCountToSale,
+    int PriceAfterSale,
+    bool OnlyClubCustomers,
+    DateTime? DateStart,
+    DateTime? DateEnd
 
-internal record Sale
+)
+
 {
-    public int SaleId { get; set; }
-    public int ProductId { get; set; }
-    public int ProductsCountToSale { get; set; } 
-    public int PriceAfterSale { get; set; }
-    public bool OnlyClubCustomers { get; set; }
-    public DateTime DateStart { get; set; }
-    public DateTime DateEnd { get; set; }
-
+    public Sale() : this(0,0,1,0,false,DateTime.Now,DateTime.Now){}
 }

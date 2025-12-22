@@ -1,9 +1,12 @@
 ﻿namespace DO;
 
-internal record Customer
-{
-    public string CustomerId { get; set; }
-    public string CustomerName { get; set; }
-    public string CustomerAddress { get; set; }
-    public string CustomerPhone { get; set; }
-}
+public record Customer
+(
+    string CustomerId,
+    string CustomerName,
+    string CustomerAddress,
+    string CustomerPhone
+)
+    {
+    public Customer() : this(0, "", "", "") { }
+    }

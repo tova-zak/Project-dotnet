@@ -1,14 +1,21 @@
 ﻿
 namespace DO;
 
-internal record Product
+public record Product
+(
+    int ProductId,
+    string ProductName,
+    ProductsCategories ProductCategory,
+    double ProductPrice,
+    int ProductCount
+)
 {
-    public int ProductId { get; set; }
-    public string ProductName { get; set; }
-    public enum ProductCategory;
-    public double ProductPrice { get; set; }
-    public int ProductCount { get; set; }
+public Product() : this(0, "", ProductsCategories.OTHER, 0, 0) 
+{ 
+}
 
-	
 
 }
+	
+
+
