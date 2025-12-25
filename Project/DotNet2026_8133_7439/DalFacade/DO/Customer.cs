@@ -8,5 +8,5 @@ public record Customer
     string CustomerPhone
 )
 {
-    public Customer() : this(0, "", "", "") { }
+    public Customer() : this("", "", "", "") { }
 }

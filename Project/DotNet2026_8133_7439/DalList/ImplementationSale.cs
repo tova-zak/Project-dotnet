@@ -1,19 +1,38 @@
 ﻿
 using DalApi;
 using DO;
+using static Dal.DataSource;
+using DalList;
+
 namespace Dal;
 
 class ImplementationSale : Isale
 {
 
-    public int Create(Sale item)
+    public int Create(
+        int SaleId,
+    int ProductId,
+    int ProductsCountToSale,
+    int PriceAfterSale,
+    bool OnlyClubCustomers,
+    DateTime? DateStart,
+    DateTime? DateEnd
+)
     {
-        Sales.Add(item);
-        return item.SaleId;
+        Sale sale = new (Config.GetNextSaleId(),
+     ProductId,
+     ProductsCountToSale,
+     PriceAfterSale,
+     OnlyClubCustomers,
+      DateStart,
+      DateEnd
+);
+        Sales.Add(sale);
+        return sale.ProductId;
     }
     public Sale? Read(int id)
     {
-        foreach(Sale s in Sales)
+        foreach (Sale s in Sales)
         {
             if (s.SaleId == id)
                 return s;
@@ -22,30 +41,23 @@ class ImplementationSale : Isale
     }
 
 
-}public List<Sale> ReadAll() {
-    return Sales;
-}
-public void Update(Sale item) {
-    foreach (Sale s in Sales)
-    {
-        if (s.SaleId == item.id)
-        {
-            Delete(s.id);
-            Create(item);
 
-        }
-            
+    public List<Sale> ReadAll()
+    {
+        return Sales;
+    }
+    public void Update(Sale item)
+    {
+        int itemIndex = Sales.FindIndex(p => p?.SaleId == item.SaleId);
+        Sales[itemIndex] = item;
+
     }
 
-}
-
-public void Delete(int id) {
-    foreach (Sale s in Sales)
+    public void Delete(int id)
     {
-        if (s.SaleId == id)
-            Sales.Remove(s);
+        int itemIndex = Sales.FindIndex(p => p?.SaleId == id);
+        Sales.RemoveAt(itemIndex);
     }
-}
 
 }
 

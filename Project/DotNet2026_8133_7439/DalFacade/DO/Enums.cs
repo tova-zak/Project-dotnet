@@ -2,7 +2,7 @@
 
     public enum ProductsCategories
     {
-        OTHER,BREADS,DIARY 
+        OTHER,BREADS,DIARY
 
     }
 

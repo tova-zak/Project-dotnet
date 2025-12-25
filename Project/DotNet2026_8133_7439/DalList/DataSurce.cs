@@ -1,25 +1,28 @@
-﻿namespace Dal
+﻿namespace Dal;
+using DalFacade;
+
+internal static class DataSource
 {
-    internal static class DataSource
+    internal static List<DO.Product?> Products = new ();
+    internal static List<DO.Customer?> Customers = new();
+    internal static List<DO.Sale?> Sales = new ();
+    internal  static class Config
     {
-        internal static List<Product?> Products = new List<Product?>();
-        internal static List<Customer?> Customers = new List<Customer?>();
-        internal static List<Sale?> Sales = new List<Sale?>();
-        internal  static class Config
+        internal const int MinIdProduct=1;
+        internal const int MinSaleId = 1222;
+
+        private static int _currentProductId = MinIdProduct;
+        private static int _currentSaleId = MinSaleId;
+
+         static int GetNextProductId()
         {
-           // internal const int StartIdProduct=1;
-            internal const int StartSaleId = 1222;
-            //internal const int StartIdProduct = 1;
-            private static int _currentSaletId = StartSaleId;
-
-            static int NextProductId
-            {
-                get
-                {
-                    return _currentSaletId++;
-                }
-
-
-            }
+            return _currentProductId++;
         }
+
+         static int GetNextSaleId()
+        {
+            return _currentSaleId++;
+        }
+
+    }
 }
