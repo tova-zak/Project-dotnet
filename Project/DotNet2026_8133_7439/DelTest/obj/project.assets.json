@@ -52,11 +52,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DelTest\\DelTest.csproj",
+      "projectUniqueName": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DelTest\\DelTest.csproj",
       "projectName": "DelTest",
-      "projectPath": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DelTest\\DelTest.csproj",
+      "projectPath": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DelTest\\DelTest.csproj",
       "packagesPath": "C:\\Users\\huser\\.nuget\\packages\\",
-      "outputPath": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DelTest\\obj\\",
+      "outputPath": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DelTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -78,11 +78,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\DalFacade.csproj": {
-              "projectPath": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\DalFacade.csproj"
+            "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\DalFacade.csproj": {
+              "projectPath": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\DalFacade.csproj"
             },
-            "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalList\\DalList.csproj": {
-              "projectPath": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalList\\DalList.csproj"
+            "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalList\\DalList.csproj": {
+              "projectPath": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalList\\DalList.csproj"
             }
           }
         }

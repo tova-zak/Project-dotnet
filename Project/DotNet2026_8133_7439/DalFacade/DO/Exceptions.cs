@@ -4,7 +4,7 @@ using System;
 
 namespace DO;
 
-internal class ItemNotFoundException : Exception
+public class ItemNotFoundException : Exception
 {
     public ItemNotFoundException(string message)
         : base(message)
@@ -13,7 +13,7 @@ internal class ItemNotFoundException : Exception
     }
 }
 
-internal class CustomerApperException : Exception
+public class CustomerApperException : Exception
 {
     public CustomerApperException(string message)
         : base(message)

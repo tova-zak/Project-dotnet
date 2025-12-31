@@ -6,15 +6,15 @@ using DalList;
 
 namespace Dal;
 
-class ImplementationSale : Isale
+internal class ImplementationSale : Isale
 {
 
     public int Create(Sale item)
                                               
     {
-
-        Sales.Add(item);
-        return item.ProductId;
+        Sale s=item with { SaleId = Config.GetNextProductId() };
+        Sales.Add(s);
+        return s.ProductId;
     }
     public Sale? Read(int id)
     {

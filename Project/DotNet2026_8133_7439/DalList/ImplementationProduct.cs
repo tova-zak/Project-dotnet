@@ -6,14 +6,14 @@ using DalList;
 
 namespace Dal;
 
-class ImplementationProduct: Iproduct
+internal class ImplementationProduct: Iproduct
 {
 
     public int Create(Product item)
     {
-        
-        Products.Add(item);
-        return item.ProductId;
+        Product p= item with { ProductId = Config.GetNextProductId()};
+        Products.Add(p);
+        return p.ProductId;
     }
     public Product? Read(int id)
     {

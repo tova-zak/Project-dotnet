@@ -4,7 +4,7 @@ using DO;
 using static Dal.DataSource;
 using DalList;
 
-class ImplementationCustomer : Icustomer
+internal class ImplementationCustomer : Icustomer
 {
 
     public int Create(Customer customer)
