@@ -9,36 +9,25 @@ namespace Dal;
 class ImplementationSale : Isale
 {
 
-    public int Create(
-        int SaleId,
-    int ProductId,
-    int ProductsCountToSale,
-    int PriceAfterSale,
-    bool OnlyClubCustomers,
-    DateTime? DateStart,
-    DateTime? DateEnd
-)
+    public int Create(Sale item)
+                                              
     {
-        Sale sale = new (Config.GetNextSaleId(),
-     ProductId,
-     ProductsCountToSale,
-     PriceAfterSale,
-     OnlyClubCustomers,
-      DateStart,
-      DateEnd
-);
-        Sales.Add(sale);
-        return sale.ProductId;
+
+        Sales.Add(item);
+        return item.ProductId;
     }
     public Sale? Read(int id)
     {
-        foreach (Sale s in Sales)
+        int itemIndex = Sales.FindIndex(p => p?.SaleId == id);
+        if (itemIndex == -1)
         {
-            if (s.SaleId == id)
-                return s;
+            throw new ItemNotFoundException("item not found");
+
         }
-        return null;
+        return Sales[itemIndex];
+
     }
+
 
 
 
@@ -49,6 +38,11 @@ class ImplementationSale : Isale
     public void Update(Sale item)
     {
         int itemIndex = Sales.FindIndex(p => p?.SaleId == item.SaleId);
+        if (itemIndex == -1)
+        {
+            throw new ItemNotFoundException("item not found");
+
+        }
         Sales[itemIndex] = item;
 
     }
@@ -56,6 +50,11 @@ class ImplementationSale : Isale
     public void Delete(int id)
     {
         int itemIndex = Sales.FindIndex(p => p?.SaleId == id);
+        if (itemIndex == -1)
+        {
+            throw new ItemNotFoundException("item not found");
+
+        }
         Sales.RemoveAt(itemIndex);
     }
 

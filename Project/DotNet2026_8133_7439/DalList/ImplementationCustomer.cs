@@ -7,26 +7,24 @@ using DalList;
 class ImplementationCustomer : Icustomer
 {
 
-    public string Create(string CustomerId,
-    string CustomerName,
-    string CustomerAddress,
-    string CustomerPhone)
+    public int Create(Customer customer)
     {
-        Customer customer = new Customer(CustomerId,
-     CustomerName,
-     CustomerAddress,
-     CustomerPhone);
+        int itemIndex = Customers.FindIndex(p => p?.CustomerId == customer.CustomerId);
+        if(itemIndex !=-1)
+        {
+            throw new CustomerApperException("customer apper");
+        }
         Customers.Add(customer);
         return customer.CustomerId;
     }
-    public Customer? Read(string id)
+    public Customer? Read(int id)
     {
-        foreach (Customer c in Customers)
+        int itemIndex = Customers.FindIndex(p => p?.CustomerId == id);
+        if (itemIndex == -1)
         {
-            if (c.CustomerId == id)
-                return c;
+            throw new ItemNotFoundException("customer not found");
         }
-        return null;
+       return Customers[itemIndex];
     }
 
 
@@ -38,13 +36,21 @@ class ImplementationCustomer : Icustomer
     public void Update(Customer item)
     {
         int itemIndex = Customers.FindIndex(p => p?.CustomerId == item.CustomerId);
+        if (itemIndex == -1)
+        {
+            throw new ItemNotFoundException("customer not found");
+        }
         Customers[itemIndex] = item;
 
     }
 
-    public void Delete(string id)
+    public void Delete(int id)
     {
         int itemIndex = Customers.FindIndex(p => p?.CustomerId == id);
+        if (itemIndex == -1)
+        {
+            throw new ItemNotFoundException("customer not found");
+        }
         Customers.RemoveAt(itemIndex);
     }
 

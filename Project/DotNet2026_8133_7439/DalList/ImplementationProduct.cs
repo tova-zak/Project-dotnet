@@ -9,28 +9,21 @@ namespace Dal;
 class ImplementationProduct: Iproduct
 {
 
-    public int Create(
-    string ProductName,
-    ProductsCategories ProductCategory,
-    double ProductPrice,
-    int ProductCount)
+    public int Create(Product item)
     {
-        Product product = new Product(Config.GetNextProductId(),
-     ProductName,
-     ProductCategory,
-     ProductPrice,
-     ProductCount);
-        Products.Add(product);
-        return product.ProductId;
+        
+        Products.Add(item);
+        return item.ProductId;
     }
     public Product? Read(int id)
     {
-        foreach (Product p in Products)
+        int itemIndex = Sales.FindIndex(p => p?.ProductId == id);
+        if (itemIndex == -1)
         {
-            if (p.ProductId == id)
-                return p;
+            throw new ItemNotFoundException("item not found");
+
         }
-        return null;
+        return Products[itemIndex];
     }
 
 
@@ -42,7 +35,12 @@ class ImplementationProduct: Iproduct
     public void Update(Product item)
     {
         int itemIndex = Sales.FindIndex(p => p?.ProductId == item.ProductId);
-       Products[itemIndex] = item;
+        if (itemIndex == -1)
+        {
+            throw new ItemNotFoundException("item not found");
+
+        }
+        Products[itemIndex] = item;
 
     }
 
@@ -51,8 +49,7 @@ class ImplementationProduct: Iproduct
         int itemIndex = Sales.FindIndex(p => p?.ProductId == id);
         if (itemIndex == -1)
         {
-
-        throw new Exception(    )
+            throw new ItemNotFoundException("item not found");
         }
         Products.RemoveAt(itemIndex);
 

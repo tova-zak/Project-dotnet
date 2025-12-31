@@ -2,11 +2,11 @@
 
 public record Customer
 (
-    string CustomerId,
+    int CustomerId,
     string CustomerName,
     string CustomerAddress,
     string CustomerPhone
 )
 {
-    public Customer() : this("", "", "", "") { }
+    public Customer() : this(0, "", "", "") { }
 }

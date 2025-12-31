@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\huser\\Documents\\GitHub\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\DalFacade.csproj": {}
+    "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\DalFacade.csproj": {}
   },
   "projects": {
-    "C:\\Users\\huser\\Documents\\GitHub\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\DalFacade.csproj": {
+    "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\DalFacade.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\huser\\Documents\\GitHub\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\DalFacade.csproj",
+        "projectUniqueName": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\DalFacade.csproj",
         "projectName": "DalFacade",
-        "projectPath": "C:\\Users\\huser\\Documents\\GitHub\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\DalFacade.csproj",
+        "projectPath": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\DalFacade.csproj",
         "packagesPath": "C:\\Users\\huser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\huser\\Documents\\GitHub\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\obj\\",
+        "outputPath": "Z:\\יד תשפו\\סבו זהבה\\c#\\Project-dotnet\\Project-dotnet\\Project\\DotNet2026_8133_7439\\DalFacade\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
