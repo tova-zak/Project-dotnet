@@ -1,5 +1,4 @@
 ﻿
-using DalFacade;
 using DO;
 
 namespace Dal;
@@ -13,7 +12,7 @@ internal static class DataSource
     internal  static class Config
     {
         internal const int MinIdProduct=1;
-        internal const int MinSaleId = 1222;
+        internal const int MinSaleId = 1040;
 
         private static int _currentProductId = MinIdProduct;
         private static int _currentSaleId = MinSaleId;

@@ -2,7 +2,6 @@
 using DalApi;
 using DO;
 using static Dal.DataSource;
-using DalList;
 
 internal class ImplementationCustomer : Icustomer
 {
@@ -31,7 +30,7 @@ internal class ImplementationCustomer : Icustomer
 
     public List<Customer> ReadAll()
     {
-        return Customers;
+        return Customers;//TODO
     }
     public void Update(Customer item)
     {

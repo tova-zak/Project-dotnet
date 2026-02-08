@@ -2,7 +2,12 @@
 
     public enum ProductsCategories
     {
-        OTHER,BREADS,DIARY
+
+
+    SHOWCASE_CAKES , BREADS , DIARY_PASTRY, FUR_PASTRY , DRINKS
 
     }
+
+
+
 

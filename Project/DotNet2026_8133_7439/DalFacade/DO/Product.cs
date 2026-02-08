@@ -10,7 +10,7 @@ public record Product
     int ProductCount
 )
 {
-public Product() : this(0, "", ProductsCategories.OTHER, 0, 0) 
+public Product() : this(0, "", ProductsCategories.FUR_PASTRY, 0, 0) 
 { 
 }
 

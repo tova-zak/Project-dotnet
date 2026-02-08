@@ -133,11 +133,23 @@ class Program
         Console.WriteLine($"Created customer id: {newId}");
     }
 
+
+
     private static void CreateProduct()
     {
-        //Console.Write("ProductId (int): "); int.TryParse(Console.ReadLine(), out int id);
+
         Console.Write("Name: "); string name = Console.ReadLine() ?? "";
-        Console.Write("Category (int): "); int.TryParse(Console.ReadLine(), out int cat);
+        Console.WriteLine("Select a Category:");
+        foreach (var category in Enum.GetValues(typeof(ProductsCategories)))
+        {
+            Console.WriteLine($"{(int)category}: {category}");
+        }
+
+        int cat;
+        while (!int.TryParse(Console.ReadLine(), out cat) || !Enum.IsDefined(typeof(ProductsCategories), cat))
+        {
+            Console.WriteLine("Invalid choice. Please select a valid category.");
+        }
         Console.Write("Price (double): "); double.TryParse(Console.ReadLine(), out double price);
         Console.Write("Count (int): "); int.TryParse(Console.ReadLine(), out int count);
         var p = new Product(0, name, (ProductsCategories)cat, price, count);
@@ -145,9 +157,11 @@ class Program
         Console.WriteLine($"Created product id: {newId}");
     }
 
+
+
     private static void CreateSale()
     {
-        //Console.Write("SaleId (int): "); int.TryParse(Console.ReadLine(), out int id);
+
         Console.Write("ProductId (int): "); int.TryParse(Console.ReadLine(), out int pid);
         Console.Write("ProductsCountToSale (int): "); int.TryParse(Console.ReadLine(), out int cnt);
         Console.Write("PriceAfterSale (int): "); int.TryParse(Console.ReadLine(), out int price);
@@ -206,7 +220,18 @@ class Program
             {
                 Console.Write("ProductId: "); int.TryParse(Console.ReadLine(), out int id);
                 Console.Write("Name: "); string name = Console.ReadLine() ?? "";
-                Console.Write("Category (int): "); int.TryParse(Console.ReadLine(), out int cat);
+                Console.WriteLine("Select a Category:");
+                foreach (var category in Enum.GetValues(typeof(ProductsCategories)))
+                {
+                    Console.WriteLine($"{(int)category}: {category}");
+                }
+
+                int cat;
+                while (!int.TryParse(Console.ReadLine(), out cat) || !Enum.IsDefined(typeof(ProductsCategories), cat))
+                {
+                    Console.WriteLine("Invalid choice. Please select a valid category.");
+                }
+             
                 Console.Write("Price (double): "); double.TryParse(Console.ReadLine(), out double price);
                 Console.Write("Count (int): "); int.TryParse(Console.ReadLine(), out int count);
                 var p = new Product(id, name, (ProductsCategories)cat, price, count);

@@ -3,11 +3,10 @@
 namespace DO;
 
 public record Sale
-(
-    int SaleId,
+(   int SaleId,
     int ProductId,
     int ProductsCountToSale,
-    int PriceAfterSale,
+    double PriceAfterSale,
     bool OnlyClubCustomers,
     DateTime? DateStart,
     DateTime? DateEnd
